@@ -34,17 +34,18 @@ The goal is to ensure the system work.
 
 ## System Maturity Phases
 
-The BLUE Knowledge Review Engine is built as a progressive decision system, where each phase increases the system’s ability to evaluate, classify, and govern knowledge.
+The BLUE Knowledge Review Engine is built as a progressive decision system, where each phase increases the system's ability to evaluate, classify, and govern knowledge.
 
 These phases describe maturity of decision-making capability, not just feature completion.
 
 ### Phase 1 - Pipeline Foundation (Structural Engine)
 This phase establishes the core deterministic pipeline that everything else builds on.
-**Goal:** Create a fully working ingestion → processing → output pipeline with no intelligence.
+
+**Goal:** Create a fully working ingestion --> processing --> output pipeline with no intelligence.
 
 #### What exists in this phase:
 - Domain models (Submission, Guide, Review, TrustVector)
-- Markdown ingestion → Submission creation
+- Markdown ingestion --> Submission creation
 - Workflow pipeline execution order
 - State machine for submission lifecycle
 - Basic heuristic scoring (quality + trust)
@@ -61,6 +62,7 @@ Structured processing pipeline that can take raw Markdown and produce a classifi
 
 ### Phase 2 - Deterministic Intelligence Layer
 This phase introduces structured reasoning and decision weighting, without probabilistic or ML systems.
+
 **Goal:** Make system outputs explainable and rule-driven, where scoring influences decisions.
 
 #### What is introduced:
@@ -78,6 +80,7 @@ This phase introduces structured reasoning and decision weighting, without proba
 
 ### Phase 3 - Human-in-the-Loop Review System
 This phase introduces structured human governance into the pipeline.
+
 **Goal:** Add human validation and escalation where system confidence is insufficient.
 
 #### What is introduced:
@@ -94,6 +97,7 @@ This phase introduces structured human governance into the pipeline.
 
 ### Phase 4 - Knowledge Graph & Retrieval Layer
 This phase turns processed submissions into a navigable knowledge structure.
+
 **Goal:** Enable discovery, linking, and traversal of knowledge.
 
 #### What is introduced:
@@ -110,6 +114,7 @@ This phase turns processed submissions into a navigable knowledge structure.
 
 ### Phase 5 - Probabilistic Intelligence Layer
 This phase introduces ML and probabilistic reasoning into the system.
+
 **Goal:** Enhance decision-making using learned patterns and embeddings.
 
 #### What is introduced:
@@ -127,7 +132,7 @@ This phase introduces ML and probabilistic reasoning into the system.
 
 ## Key Design Principle
 At all phases:
-> Deterministic governance remains the system’s foundation.  
+> Deterministic governance remains the system's foundation.  
 > Intelligence layers augment, not replace, structural decision logic.
 
 ## The Complete Review Process
