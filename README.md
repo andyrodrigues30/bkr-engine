@@ -1,7 +1,7 @@
 # BLUE Knowledge Review Engine (Prototype)
 > A Rust-based prototype for a governed knowledge evolution system.
 
-Instead of treating knowledge as static content (like a wiki), BLUE models it as something that is: submitted, reviewed, classified, and evolved over time.
+Instead of treating knowledge as static content, BLUE models it as something that constantly evolved over time.
 
 ## Core Idea
 
@@ -12,7 +12,18 @@ Knowledge is not stored - it is processed through a structured lifecycle:
 - Evolved into variants or amendments
 - Tracked through trust and history
 
-The system is designed for auditable knowledge governance, not free-form editing.
+The system is designed for auditable knowledge governance.
+
+## Aims Of The Review Process
+The review process is split into multiple components to ensure it scales, stays reliable, and continues working even when human expertise is limited or unavailable.
+
+The process:
+- avoids bottlenecks by distributing evaluation instead of relying on a single reviewer
+- reduces reviewer dependency as it prevents the system relying on a small group of experts for all decisions
+- handles niche content when no suitable reviewer exists, evaluation falls back to structured signals (pieces of evidence the system uses to make a judgment) instead of blocking
+- replaces binary approval with multiple signals (quality, reliability, history, consensus) to evaluate content even under uncertainty
+- still produces a meaningful trust score even without strong human input
+- reduce bias and disagreement between reviewers through multiple signals
 
 ## Prototyle Goal
 BKR Engine explores how:
@@ -32,8 +43,10 @@ This project follows a strict progression:
 
 The goal is to ensure the system work.
 
-## System Maturity Phases
+## The Complete Review Process
+![Review Process](docs/diagrams/Review-Process.png)
 
+## System Maturity Phases
 The BLUE Knowledge Review Engine is built as a progressive decision system, where each phase increases the system's ability to evaluate, classify, and govern knowledge.
 
 These phases describe maturity of decision-making capability, not just feature completion.
@@ -134,6 +147,3 @@ This phase introduces ML and probabilistic reasoning into the system.
 At all phases:
 > Deterministic governance remains the system's foundation.  
 > Intelligence layers augment, not replace, structural decision logic.
-
-## The Complete Review Process
-![Review Process](docs/diagrams/Review-Process.png)
